@@ -5,148 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Ermerson Rodrigues | Física</title>
     <style>
-        /* Estilos Globais */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: #f4f4f9; }
-        
-        /* Cabeçalho e Navegação */
-        header { background: linear-gradient(135deg, #1a237e 0%, #303f9f 100%); color: white; padding: 3rem 2rem; text-align: center; shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 10px 0 0; opacity: 0.9; font-size: 1.1rem; }
-        
-        nav { background: #fff; padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: #1a237e; margin: 0 15px; text-decoration: none; font-weight: bold; transition: 0.3s; padding: 5px 10px; border-radius: 4px; }
-        nav a:hover { background-color: #e8eaf6; }
-
-        /* Container Principal */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: #f4f4f9; scroll-behavior: smooth; }
+        header { background: linear-gradient(135deg, #1a237e 0%, #303f9f 100%); color: white; padding: 3rem 2rem; text-align: center; }
+        nav { background: #fff; padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #1a237e; margin: 0 15px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ff6f00; }
         .container { max-width: 1100px; margin: 20px auto; padding: 20px; }
+        section { margin-bottom: 50px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: #1a237e; border-bottom: 3px solid #ff6f00; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #eee; border-radius: 8px; padding: 20px; transition: 0.3s; background: #fff; text-align: center; }
+        .card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .btn { background: #ff6f00; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: bold; }
+        .btn-sim { background: #0288d1; }
         
-        /* Seções e Títulos */
-        section { margin-bottom: 40px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        h2 { color: #1a237e; border-bottom: 3px solid #ff6f00; padding-bottom: 10px; display: inline-block; margin-top: 0; }
-        
-        /* Grid de Cards (Materiais e Desafios) */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
-        .card { border: 1px solid #eee; border-radius: 8px; padding: 20px; transition: 0.3s; background: #fff; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.1); transform: translateY(-5px); border-color: #303f9f; }
-        .card h3 { color: #303f9f; margin-top: 0; }
-        
-        /* Botões */
-        .btn { background: #ff6f00; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: bold; text-align: center; transition: 0.3s; }
-        .btn:hover { background: #e66400; }
-        .btn-secondary { background: #0277bd; }
-        .btn-secondary:hover { background: #01579b; }
+        /* Galeria */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .gallery-item { height: 150px; border-radius: 8px; overflow: hidden; position: relative; background: #ddd; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* --- NOVA SEÇÃO: ESTILOS DA GALERIA DE FOTOS --- */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; height: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; /* Mantém a proporção cortando o excesso */ transition: transform 0.5s ease; }
-        .gallery-item:hover img { transform: scale(1.1); /* Efeito de zoom no hover */ }
-        .gallery-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.7); color: white; padding: 10px; font-size: 0.9rem; transform: translateY(100%); transition: transform 0.3s ease; }
-        .gallery-item:hover .gallery-caption { transform: translateY(0); }
-        /* ----------------------------------------------- */
-
-        /* Rodapé */
         .footer { background: #212121; color: white; text-align: center; padding: 2rem; margin-top: 50px; }
-        .footer p { margin: 5px 0; opacity: 0.8; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Prof. Ermerson Rodrigues</h1>
-    <p>Desvendando os mistérios do Universo através da Física</p>
+    <p>A Física explicada de forma clara e interativa</p>
 </header>
 
 <nav>
-    <a href="#sobre">Início</a>
     <a href="#materiais">Materiais</a>
-    <a href="#galeria">Física em Ação</a> <a href="#desafios">Desafios</a>
+    <a href="#simuladores">Simuladores</a>
+    <a href="#galeria">Física em Ação</a>
+    <a href="#desafios">Desafios</a>
 </nav>
 
 <div class="container">
-    <section id="sobre">
-        <h2>Bem-vindos, Futuros Cientistas!</h2>
-        <p>Este é o nosso ponto de encontro virtual. Aqui você encontrará tudo o que precisa para dominar a Física: desde listas de exercícios e slides das aulas até simuladores interativos e desafios para treinar seu raciocínio. Aproveite o conteúdo e bons estudos!</p>
-    </section>
-
     <section id="materiais">
-        <h2>Materiais Didáticos</h2>
-        <p>Acesse as pastas organizadas com PDFs, listas e resumos.</p>
+        <h2>📚 Materiais de Apoio</h2>
         <div class="grid">
             <div class="card">
-                <div>
-                    <h3>🚀 Mecânica</h3>
-                    <p>Cinemática (MRU, MRUV), Leis de Newton, Energia e Trabalho, Hidrostática.</p>
-                </div>
-                <a href="#" class="btn" target="_blank">Acessar Materiais</a>
+                <h3>Mecânica</h3>
+                <p>Listas de cinemática e dinâmica.</p>
+                <a href="#" class="btn">Baixar PDF</a>
             </div>
             <div class="card">
-                <div>
-                    <h3>🔥 Termofísica e Ondas</h3>
-                    <p>Calorimetria, Leis da Termodinâmica, MHS, Ondas e Acústica.</p>
-                </div>
-                <a href="#" class="btn" target="_blank">Ver Arquivos</a>
+                <h3>Eletricidade</h3>
+                <p>Resumos de circuitos e leis de Ohm.</p>
+                <a href="#" class="btn">Baixar PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="simuladores" style="background-color: #e1f5fe;">
+        <h2>🧪 Laboratório Virtual (Simuladores)</h2>
+        <p>Aprenda testando! Explore as leis da física com estas ferramentas interativas:</p>
+        <div class="grid">
+            <div class="card">
+                <h3>PhET Interactive</h3>
+                <p>Simulações de alta qualidade da Univ. do Colorado (Grátis).</p>
+                <a href="https://phet.colorado.edu/pt_BR/" target="_blank" class="btn btn-sim">Abrir Simulador</a>
             </div>
             <div class="card">
-                <div>
-                    <h3>⚡ Eletromagnetismo</h3>
-                    <p>Eletrostática, Circuitos Elétricos (Resistores, Capacitores) e Magnetismo.</p>
-                </div>
-                <a href="#" class="btn" target="_blank">Baixar Listas</a>
+                <h3>Vascak HTML5</h3>
+                <p>Animações excelentes de mecânica, óptica e ondas.</p>
+                <a href="https://www.vascak.cz/physicsphp.php?l=pt" target="_blank" class="btn btn-sim">Explorar Animações</a>
+            </div>
+            <div class="card">
+                <h3>oPhys - Física</h3>
+                <p>Simuladores leves e diretos para conceitos específicos.</p>
+                <a href="https://www.ophysics.com/" target="_blank" class="btn btn-sim">Ver no oPhys</a>
             </div>
         </div>
     </section>
 
     <section id="galeria">
-        <h2>Física em Ação</h2>
-        <p>Registros de experimentos, demonstrações em sala de aula e fenômenos físicos do dia a dia.</p>
-        
+        <h2>📸 Física em Ação</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300?text=Experimento+1" alt="Demonstração de Óptica">
-                <div class="gallery-caption">Experimento de Refração da Luz com Prismas.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300?text=Experimento+2" alt="Lançamento de Foguete">
-                <div class="gallery-caption">Lançamento de foguetes de garrafa PET (3º Ano).</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300?text=Experimento+3" alt="Circuito Elétrico">
-                <div class="gallery-caption">Montagem de circuito em série e paralelo no laboratório.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300?text=Fenômeno+Natural" alt="Arco-íris">
-                <div class="gallery-caption">Dispersão da luz solar nas gotas de chuva (Decomposição).</div>
-            </div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Exp+1" alt="Foto 1"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Exp+2" alt="Foto 2"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Exp+3" alt="Foto 3"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Exp+4" alt="Foto 4"></div>
         </div>
     </section>
 
     <section id="desafios">
-        <h2>Desafios da Semana</h2>
-        <p>Coloque seu cérebro para trabalhar com questões desafiadoras e curiosidades.</p>
-        <div class="grid">
-            <div class="card" style="border-top: 4px solid #ff6f00;">
-                <div>
-                    <h3>🧐 Problema de Lógica</h3>
-                    <p>"Se um carro dobra sua velocidade, o que acontece com sua energia cinética e com sua distância de frenagem?"</p>
-                </div>
-                <a href="#" class="btn btn-secondary">Enviar Resposta</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>🔍 Curiosidade Científica</h3>
-                    <p>Você sabia que o tempo passa mais devagar para quem está em movimento? Entenda a Relatividade.</p>
-                </div>
-                <a href="#" class="btn btn-secondary">Ler Mais</a>
-            </div>
+        <h2>🧠 Desafio do Mês</h2>
+        <div class="card">
+            <p><strong>O Problema da Balança:</strong> Se você pesar um balde com água e depois colocar um peixe (que flutua) nele, o peso total muda? Por quê?</p>
+            <a href="mailto:seu-email@gmail.com" class="btn" style="background:#4caf50">Enviar minha resposta</a>
         </div>
     </section>
 </div>
 
 <div class="footer">
-    <p><strong>Prof. Ermerson Rodrigues</strong></p>
-    <p>Licenciado em Física | Entusiasta da Educação Científica</p>
-    <p>&copy; 2024 - Todos os direitos reservados.</p>
+    <p>Prof. Ermerson Rodrigues - 2024</p>
 </div>
 
 </body>
