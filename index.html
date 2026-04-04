@@ -33,10 +33,11 @@
         
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
 
-        .tag-semestre { color: #666; font-size: 0.85rem; font-weight: bold; background: #f0f0f0; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+        /* Estilo das Etiquetas */
+        .tag-semestre { color: #666; font-size: 0.75rem; font-weight: bold; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px; }
+        .tag-turma { color: #0d47a1; font-size: 0.75rem; font-weight: bold; background: #e3f2fd; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px; margin-right: 3px; border: 1px solid #bbdefb; }
 
         .highlight-box { background: #fffdf0; border: 2px dashed #ffab00; padding: 25px; border-radius: 10px; margin-top: 15px; }
-
         .footer { background: #1a237e; color: white; text-align: center; padding: 2.5rem 1rem; margin-top: 60px; }
     </style>
 </head>
@@ -62,12 +63,14 @@
     
     <section id="materiais">
         <h2>📚 Materiais de Apoio (Turmas)</h2>
-        <p>Acesse os arquivos e listas de exercícios para o semestre letivo:</p>
+        <p>Acesse o conteúdo da sua turma para o semestre letivo:</p>
         <div class="grid">
             
             <div class="card">
                 <div>
-                    <span class="tag-semestre">Semestre Atual: 2026.1</span>
+                    <span class="tag-semestre">2026.1</span><br>
+                    <span class="tag-turma">1º Ano A</span>
+                    <span class="tag-turma">1º Ano B</span>
                     <h3>Mecânica Clássica</h3>
                     <p>Cinemática, Leis de Newton e Energia.</p>
                 </div>
@@ -76,7 +79,8 @@
 
             <div class="card">
                 <div>
-                    <span class="tag-semestre">Semestre Atual: 2026.1</span>
+                    <span class="tag-semestre">2026.1</span><br>
+                    <span class="tag-turma">2º Ano A</span>
                     <h3>Termologia e Ondas</h3>
                     <p>Calorimetria, Termodinâmica e Ondas.</p>
                 </div>
@@ -85,7 +89,8 @@
 
             <div class="card">
                 <div>
-                    <span class="tag-semestre">Semestre Atual: 2026.1</span>
+                    <span class="tag-semestre">2026.1</span><br>
+                    <span class="tag-turma">3º Ano C</span>
                     <h3>Eletromagnetismo</h3>
                     <p>Cargas elétricas, Circuitos e Magnetismo.</p>
                 </div>
@@ -100,17 +105,17 @@
         <div class="grid">
             <div class="card">
                 <h3>PhET Interactive</h3>
-                <p>Simulações interativas da Univ. de Colorado.</p>
+                <p>Simulações da Univ. de Colorado.</p>
                 <a href="https://phet.colorado.edu/pt_BR/" target="_blank" class="btn btn-sim">Abrir PhET</a>
             </div>
             <div class="card">
                 <h3>Vascak - Física</h3>
-                <p>Animações didáticas em HTML5 (Link Oficial).</p>
+                <p>Animações didáticas em HTML5.</p>
                 <a href="https://www.vascak.cz/" target="_blank" class="btn btn-sim">Abrir Vascak</a>
             </div>
             <div class="card">
                 <h3>oPhys - Física</h3>
-                <p>Simuladores leves para diversos conceitos.</p>
+                <p>Simuladores de conceitos físicos.</p>
                 <a href="https://www.ophysics.com/" target="_blank" class="btn btn-sim">Abrir oPhys</a>
             </div>
         </div>
@@ -119,13 +124,12 @@
     <section id="aulas" style="border-top: 6px solid #1a237e;">
         <h2>🎓 Aulas Particulares & Reforço</h2>
         <div class="highlight-box">
-            <p>Precisa de um acompanhamento personalizado para superar desafios em Física?</p>
+            <p>Acompanhamento personalizado para superar desafios em Física.</p>
             <ul style="margin: 15px 0; padding-left: 20px;">
                 <li><strong>Modalidades:</strong> Online ou Presencial.</li>
-                <li><strong>Foco:</strong> ENEM, Vestibulares e Reforço Escolar.</li>
-                <li><strong>Diferencial:</strong> Material próprio focado na sua dúvida.</li>
+                <li><strong>Foco:</strong> ENEM e Reforço Escolar.</li>
             </ul>
-            <a href="https://wa.me/5500000000000?text=Olá%20Prof.%20Ermerson,%20tenho%20interesse%20nas%20aulas%20particulares!" 
+            <a href="https://wa.me/5598988108965?text=Olá%20Prof.%20Ermerson,%20tenho%20interesse%20nas%20aulas%20particulares!" 
                target="_blank" class="btn btn-dark">
                Consultar Horários e Valores
             </a>
@@ -136,7 +140,6 @@
         <h2>🧠 Desafio da Semana</h2>
         <div class="card" style="text-align: center; border-top: 4px solid #ff6f00;">
             <p style="font-size: 1.1rem; font-style: italic;">"No vácuo, o que cai mais rápido: uma pena ou um martelo?"</p>
-            <p>Pense na resposta e vamos debater em sala!</p>
         </div>
     </section>
 
