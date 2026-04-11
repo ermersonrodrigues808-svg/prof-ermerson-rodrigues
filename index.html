@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Ermerson Rodrigues | Física IFMA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: #f8f9fa; }
@@ -29,14 +31,18 @@
         .card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* Botões */
-        .btn { padding: 12px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: bold; text-align: center; transition: 0.3s; border: none; cursor: pointer; }
+        .btn { padding: 12px 20px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; text-align: center; transition: 0.3s; border: none; cursor: pointer; }
         .btn-header-aluno { background: #ffffff; color: #0d47a1; }
-        .btn-header-aula { background: #ffab00; color: #1a237e; }
+        .btn-header-contato { background: #25d366; color: white; } /* Verde WhatsApp */
         .btn-orange { background: #ff6f00; color: white; margin-top: 15px; }
         .btn-sim { background: #00897b; color: white; margin-top: 15px; }
         .btn-dark { background: #1a237e; color: white; border: 2px solid #ffab00; margin-top: 20px; }
         
         .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        /* Botão Flutuante WhatsApp */
+        .wpp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 10000; transition: 0.3s; text-decoration: none; }
+        .wpp-float:hover { transform: scale(1.1); background-color: #128c7e; }
 
         /* Box de Aulas e Nota Ética */
         .highlight-box { background: #fffdf0; border: 2px dashed #ffab00; padding: 25px; border-radius: 10px; margin-top: 15px; }
@@ -47,19 +53,25 @@
 </head>
 <body>
 
+<a href="https://wa.me/5598988108965" class="wpp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <header>
     <h1>Prof. Ermerson Rodrigues</h1>
     <p>Física | IFMA - Campus Maracanã</p>
     <div class="header-btns">
         <a href="#materiais" class="btn btn-header-aluno">📂 Área do Aluno</a>
-        <a href="#aulas" class="btn btn-header-aula">🎓 Aulas Particulares</a>
+        <a href="https://wa.me/5598988108965" class="btn btn-header-contato" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Fale Comigo
+        </a>
     </div>
 </header>
 
 <nav>
     <a href="#materiais">Materiais</a>
     <a href="#simuladores">Simuladores</a>
-    <a href="#aulas">Particulares</a>
+    <a href="#contato">Contato</a>
     <a href="#desafios">Desafios</a>
 </nav>
 
@@ -108,23 +120,22 @@
         </div>
     </section>
 
-    <section id="aulas" style="border-top: 6px solid #1a237e;">
-        <h2>🎓 Aulas Particulares & Reforço</h2>
+    <section id="contato" style="border-top: 6px solid #1a237e;">
+        <h2>💬 Contato & Aulas</h2>
         <div class="highlight-box">
-            <p>Acompanhamento personalizado focado em resultados para exames e vestibulares.</p>
+            <p>Seja para dúvidas, parcerias ou aulas particulares, estou à disposição para ajudar.</p>
             <ul style="margin: 15px 0; padding-left: 20px;">
-                <li><strong>Modalidades:</strong> Online ou Presencial (São Luís/MA).</li>
-                <li><strong>Público:</strong> Alunos de outras instituições, ENEM e Concursos.</li>
-                <li><strong>Metodologia:</strong> Foco prático em resolução de problemas.</li>
+                <li><strong>Aulas Particulares:</strong> Online ou Presencial (São Luís/MA).</li>
+                <li><strong>Projetos:</strong> Consultoria em Educação Científica e Tecnologia.</li>
+                <li><strong>Atendimento:</strong> Resposta rápida via WhatsApp.</li>
             </ul>
 
             <div class="nota-etica">
                 <strong>⚠️ Nota Ética:</strong> Em conformidade com as boas práticas docentes, não realizo atendimento particular para meus próprios alunos regulares do IFMA. Para dúvidas acadêmicas, meus alunos devem utilizar os horários oficiais de atendimento no Campus.
             </div>
 
-            <a href="https://wa.me/5598988108965?text=Olá%20Prof.%20Ermerson,%20vi%20seu%20site%20e%20gostaria%20de%20saber%20sobre%20as%20aulas%20particulares!" 
-               target="_blank" class="btn btn-dark">
-               Consultar Horários e Valores
+            <a href="https://wa.me/5598988108965" target="_blank" class="btn btn-dark">
+               <i class="fa-brands fa-whatsapp"></i> Iniciar Conversa
             </a>
         </div>
     </section>
